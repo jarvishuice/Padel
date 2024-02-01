@@ -1,0 +1,16 @@
+from abc import ABC,abstractmethod
+from core.Entities.Productos.productosEntity import ProductosEntity
+
+
+class IProductos(ABC):
+    @abstractmethod
+    def CrearProducto(self,producto:ProductosEntity): ...
+    @abstractmethod
+    def EditarProductos(self,producto:ProductosEntity): ...
+    @abstractmethod
+    def GetAllProductos(self): ...
+    @abstractmethod
+    def getProductByCategoria(self,idCategoria:int): ...
+    @abstractmethod
+    def getProductosByAlmacen(self,idAlmacen:int): ...
+

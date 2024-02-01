@@ -42,6 +42,7 @@ class ConceptosDAO(IConceptos,Psql):
        finally :
            self.disconnect ()
 
+    @property
     def getAllConceptos(self) -> ResponseInternalEntity :
         try:
             data = []
@@ -49,9 +50,9 @@ class ConceptosDAO(IConceptos,Psql):
             if conection.status != True:
                 Logs.Error("Error de conexion a la base de datos")
                 return ResponseInternal.responseInternal(
-                    ResponseInternalEntity(status=False, message="Erro de conexion al servidor BD", response=None))
+                    ResponseInternalEntity(status=False, message="Error de conexion al servidor BD", response=None))
             with self.conn.cursor() as cur:
-                cur.execute(f"select * from conceptos_pagos")
+                cur.execute(f"select * from conceptos_pagos order by id asc;")
                 count = cur.rowcount
                 if count <= 0:
                     Logs.Warnings("no se encontro ningun Banco registrado")

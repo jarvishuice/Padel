@@ -6,8 +6,7 @@ El proyecto Padel es una aplicación web que permite a los usuarios gestionar su
 
 ## Arquitectura
 
-El proyecto Padel está construido utilizando la arquitectura Model-View-Controller (MVC) aplicando programacion reactiva y el patron de diseno DAO para ael acceso a datos. El modelo representa los datos de la aplicación, la vista representa la interfaz de usuario, y el controlador gestiona la interacción entre el modelo y la vista.
-
+El proyecto Padel está construido utilizando la arquitectura Micro servicios y  aplicando programacion reactiva y el patron de diseno DAO para ael acceso a datos. todo esto en python y c/c++ en reconstriucion de paquetes nativos de python para una mejor eficacia en el servicio  
 ## Base de datos
 
 El proyecto Padel utiliza una base de datos PostgreSQL para almacenar los datos de la aplicación. La base de datos está organizada en una serie de tablas, incluyendo una tabla de usuarios, una tabla de cuentas, una tabla de transacciones, y una tabla de presupuestos.

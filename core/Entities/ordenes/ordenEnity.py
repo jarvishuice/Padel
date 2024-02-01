@@ -3,9 +3,11 @@ from pydantic import BaseModel
 
 class OrdenEntity(BaseModel):
     """
-        :return
+        :
+        Encabezado de lAS ORDENES
 
 
+        :Attributes:
            :var id :str  Identificador único de la orden.
            :var total :float  Total de la orden.
            :var idCliente :str Identificador único del cliente.

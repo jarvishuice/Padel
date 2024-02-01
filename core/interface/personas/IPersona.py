@@ -1,0 +1,13 @@
+from abc import ABC,abstractmethod
+from core.Entities.persona.personaEntity import PersonaEntity
+from core.ROOM.ResponseInternal import ResponseInternalEntity
+
+class IPersona(ABC):
+    @abstractmethod
+    def crearPersona(self, client: PersonaEntity) -> ResponseInternalEntity:     ...
+    @abstractmethod
+    def getAllPersona(self) -> ResponseInternalEntity: ...
+    @abstractmethod
+    def searchPersonaByCi(self,ci:str) -> ResponseInternalEntity: ...
+    @abstractmethod
+    def searchPersonaByName(self,name:str) -> ResponseInternalEntity: ...

@@ -3,8 +3,8 @@ import time
 from config.utils.override import override
 from providers.Db.PostgresConection import Psql
 from config.LOGS.LogsSystem import Logs
-from core.interface.clients.ICliente import ICliente,ResponseInternalEntity,ResponseInternal,PersonaEntity
-class ClientesDAO(ICliente,Psql,Logs):
+from core.interface.personas.IPersona import IPersona,ResponseInternalEntity,PersonaEntity
+class ClientesDAO(IPersona,Psql,Logs):
 
     def __init__(self):
         """
@@ -38,7 +38,7 @@ class ClientesDAO(ICliente,Psql,Logs):
             return ResponseInternal.responseInternal(ResponseInternalEntity(status=False,message="error de base de datos",response=None))
         except self.INTERFACE_ERROR as e :
             Logs.Error(f"Error de interface detail {e}")
-            return ResponseInternal.responseInternal(ResponseInternalEntity(status=False,message="Error de interface en base de datos",response=None))
+            return ResponseInternalEntity(status=False,message="Error de interface en base de datos",response=None)
         except self.OPERATIONAL_ERROR as e :
             Logs.Error(f"Error de operaciones detail [{e}]")
             return ResponseInternal.responseInternal(ResponseInternalEntity(status=False,message="Error de operaciones en la base de datos",response= None))

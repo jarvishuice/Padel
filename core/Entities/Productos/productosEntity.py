@@ -2,6 +2,10 @@ from pydantic import BaseModel
 
 
 class ProductosEntity(BaseModel):
+    """
+    :var id identiificador del producto
+    """
+    #este se gebnera con :time.time()
     id: str
     nombre: str
     urlImg:str
