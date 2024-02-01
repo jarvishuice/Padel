@@ -1,6 +1,6 @@
 import configparser
 from configparser import ConfigParser
-
+import os
 
 class CredentialDb() :
     __config: ConfigParser = configparser.ConfigParser()
@@ -10,16 +10,13 @@ class CredentialDb() :
     db = __config.get("POSTGRESQL", 'data_base')
     host = __config.get("POSTGRESQL", 'host')
     password = __config.get("POSTGRESQL", 'password')
-    print(user)
+    #print(user)
 
 
 
     def __init__ (self) :
 
-        #for seccion  in self.__config.sections():
-         #   print(seccion)
-          #  for opcion in config.options(seccion) :
-           #     print(f"{opcion} = {config.get(seccion, opcion)}")
+
         self.keys = self.__config.options("POSTGRESQL")
         self.pru = self.__config.get("POSTGRESQL",'host')
     def getDatos (self):
@@ -28,5 +25,5 @@ class CredentialDb() :
         return conection
 
 
-p = CredentialDb()
-print(p.getDatos())
+#p = CredentialDb()
+#print(p.getDatos())
