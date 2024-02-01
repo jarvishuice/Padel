@@ -2,10 +2,10 @@ from pydantic import BaseModel
 from typing import Optional
 
 
-class ClienteEntity (BaseModel):
+class PersonaEntity (BaseModel):
     """
     :
-       The ClienteEntity entity represents a client in the system.
+       The PersonaEntity entity represents a client in the system.
 
        Attributes:
            :var id :str The unique identifier of the client.
@@ -27,3 +27,4 @@ class ClienteEntity (BaseModel):
     fechaIngreso: Optional[str]
     urlImagen: Optional[str]
     deuda: Optional[float]
+    idTIpoPersona: int

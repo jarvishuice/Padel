@@ -1,13 +1,13 @@
 from abc import ABC,abstractmethod
 
-from core.Entities.clients.clienteEntity import ClienteEntity
+from core.Entities.clients.personaEntity import PersonaEntity
 from core.ROOM.ResponseInternal import ResponseInternalEntity,ResponseInternal
 class ICliente(ABC):
     @abstractmethod
-    def crearCliente(self,client: ClienteEntity) -> ResponseInternalEntity:
+    def crearCliente(self, client: PersonaEntity) -> ResponseInternalEntity:
         """
 
-        :type ClienteEntity: c
+        :type PersonaEntity: c
         """
         ...
     @abstractmethod
