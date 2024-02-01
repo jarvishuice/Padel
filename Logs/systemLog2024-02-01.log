@@ -1,0 +1,76 @@
+ [0;36m[2024-02-01 11:08:03.249078]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:08:03.275017]:[0;32mcliente regitrado con exito 
+ [0;36m[2024-02-01 11:08:03.275590]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:08:36.314503]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:08:36.318622]:[0;32mConceptos leidos con exito
+ [0;36m[2024-02-01 11:08:36.318988]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:09:23.760194]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:09:23.763776]:[0;31m Error de base de datos  detail[error de sintaxis en o cerca de «,»
+LINE 1: ...igtf,sub_total,status) values(`1706800163.7463455`,0.0,'1706...
+                                                             ^
+]
+ [0;36m[2024-02-01 11:09:23.763882]:[0;32merror de base de datos
+ [0;36m[2024-02-01 11:09:23.764137]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:11:09.413547]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:11:09.414409]:[0;31m Error de base de datos  detail[error de sintaxis en o cerca de «,»
+LINE 1: ...igtf,sub_total,status) values(`1706800269.4012454`,0.0,'1706...
+                                                             ^
+]
+ [0;36m[2024-02-01 11:11:09.414543]:[0;32merror de base de datos
+ [0;36m[2024-02-01 11:11:09.414856]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:11:39.122843]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:11:39.123673]:[0;31m Error de base de datos  detail[error de sintaxis en o cerca de «,»
+LINE 1: ...igtf,sub_total,status) values(`1706800299.1114693`,0.0,'1706...
+                                                             ^
+]
+ [0;36m[2024-02-01 11:11:39.123776]:[0;32merror de base de datos
+ [0;36m[2024-02-01 11:11:39.124087]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:11:51.066180]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:11:51.074468]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:12:49.484397]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:12:49.486739]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:23:00.973601]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:23:00.976245]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:24:39.609306]:[0;33m -1000.0
+ [0;36m[2024-02-01 11:24:39.623212]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:24:39.625367]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:24:51.314422]:[0;33m 1000.0
+ [0;36m[2024-02-01 11:24:51.333268]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:24:51.337651]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:25:00.985768]:[0;33m -1000.0
+ [0;36m[2024-02-01 11:25:00.995977]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:25:00.999344]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:26:27.955834]:[0;33m -1000.0
+ [0;36m[2024-02-01 11:26:27.969701]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:26:27.972667]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:27:03.317416]:[0;33m -1000.0
+ [0;36m[2024-02-01 11:27:03.329417]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:27:03.332252]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:27:35.297630]:[0;33m 1000.0
+ [0;36m[2024-02-01 11:27:35.297812]:[0;33m -1000.0
+ [0;36m[2024-02-01 11:27:35.311417]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:27:35.313858]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:29:06.587498]:[0;33m 1000.0
+ [0;36m[2024-02-01 11:29:06.587603]:[0;33m -1000.0
+ [0;36m[2024-02-01 11:29:06.603185]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:29:06.605179]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:29:36.679464]:[0;33m 1000.0
+ [0;36m[2024-02-01 11:29:36.679704]:[0;33m -1000.0
+ [0;36m[2024-02-01 11:29:36.692109]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:29:36.694945]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:30:40.542605]:[0;33m 1000.0
+ [0;36m[2024-02-01 11:30:40.542746]:[0;33m -1000.0
+ [0;36m[2024-02-01 11:30:40.557476]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:30:40.559602]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 11:30:55.254348]:[0;33m 1000.0
+ [0;36m[2024-02-01 11:30:55.254522]:[0;33m 1000.0
+ [0;36m[2024-02-01 11:30:55.266335]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 11:30:55.269583]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 12:26:18.130907]:[0;33m 1000.0
+ [0;36m[2024-02-01 12:26:18.131047]:[0;33m 1000.0
+ [0;36m[2024-02-01 12:26:18.151902]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 12:26:18.155996]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-01 12:27:25.607411]:[0;33m 1000.0
+ [0;36m[2024-02-01 12:27:25.607514]:[0;33m 1000.0
+ [0;36m[2024-02-01 12:27:25.621201]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-01 12:27:25.629537]:[0;32mDesconexión exitosa de la base de datos

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="id" value="782b6ba8-a9bf-43eb-8ccb-f00e0f2c539f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Draft" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="description" value="Test a los sericios de paedel" />
+          <option name="folders">
+            <list>
+              <folderState>
+                <option name="id" value="c8c1b1ab-11d7-4a17-ac73-b2641c3ed3ca" />
+                <option name="name" value="users" />
+                <option name="requests">
+                  <list>
+                    <requestState>
+                      <option name="id" value="d91f48cf-9dc6-4350-86ca-96978f5a1497" />
+                      <option name="method" value="GET" />
+                      <option name="name" value="getAllUser" />
+                      <option name="url" value="http://0.0.0.0:8010/Padel/user/getAll" />
+                    </requestState>
+                  </list>
+                </option>
+                <option name="sortWeight" value="1000000" />
+              </folderState>
+            </list>
+          </option>
+          <option name="id" value="2a7f9984-8f55-471d-b316-965dd11680c4" />
+          <option name="name" value="Padel Test" />
+          <option name="sortWeight" value="1000000" />
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="folderPath" value="$PROJECT_DIR$/.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="9152d5df-44fd-4e2f-97ec-f2402d623f40" />
+  </component>
+</project>
