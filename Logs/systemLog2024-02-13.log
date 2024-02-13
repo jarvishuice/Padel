@@ -64,3 +64,8 @@ DETAIL:  La llave (id_concepto)=(0) no está presente en la tabla «conceptos_pa
  [0;36m[2024-02-13 00:25:39.428339]:[0;33m -101.0
  [0;36m[2024-02-13 00:25:39.438799]:[0;32mConexion realizada con exito
  [0;36m[2024-02-13 00:25:39.443073]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-13 00:41:31.882458]:[0;33m claculando el total de una orden de ingreso 101.0
+ [0;36m[2024-02-13 00:41:31.882647]:[0;33m calculando el total de l una orden de egreso -101.0
+ [0;36m[2024-02-13 00:41:31.909322]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:41:31.933208]:[0;32mORDEN #[1707799291.8826816] -> registrada con exito !!!
+ [0;36m[2024-02-13 00:41:31.934007]:[0;32mDesconexión exitosa de la base de datos
