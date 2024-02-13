@@ -1,0 +1,66 @@
+ [0;36m[2024-02-13 00:16:00.712535]:[0;33m 10.0
+ [0;36m[2024-02-13 00:16:00.713267]:[0;33m -10.0
+ [0;36m[2024-02-13 00:16:00.725607]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:16:00.727167]:[0;31m Error de base de datos  detail[no existe la columna «id_cliente» en la relación «ordenes»
+LINE 1: insert into ordenes(id,total,id_cliente,fecha_apertura,fecha...
+                                     ^
+]
+ [0;36m[2024-02-13 00:16:00.727293]:[0;32merror de base de datos
+ [0;36m[2024-02-13 00:16:00.727564]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-13 00:16:48.946233]:[0;33m 10.0
+ [0;36m[2024-02-13 00:16:48.946403]:[0;33m -10.0
+ [0;36m[2024-02-13 00:16:48.958721]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:16:48.960070]:[0;31m Error de base de datos  detail[no existe la columna «id_cliente» en la relación «ordenes»
+LINE 1: insert into ordenes(id,total,id_cliente,fecha_apertura,fecha...
+                                     ^
+]
+ [0;36m[2024-02-13 00:16:48.960168]:[0;32merror de base de datos
+ [0;36m[2024-02-13 00:16:48.960458]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-13 00:17:11.868261]:[0;33m 10.0
+ [0;36m[2024-02-13 00:17:11.868389]:[0;33m -10.0
+ [0;36m[2024-02-13 00:17:11.882905]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:17:11.883700]:[0;31m Error de base de datos  detail[no existe la columna «id_cliente» en la relación «ordenes»
+LINE 1: insert into ordenes(id,total,id_cliente,fecha_apertura,fecha...
+                                     ^
+]
+ [0;36m[2024-02-13 00:17:11.883803]:[0;32merror de base de datos
+ [0;36m[2024-02-13 00:17:11.884022]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-13 00:17:52.432053]:[0;33m 0.0
+ [0;36m[2024-02-13 00:17:52.432210]:[0;33m 0.0
+ [0;36m[2024-02-13 00:17:52.443398]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:17:52.445302]:[0;31m Error de base de datos  detail[no existe la columna «id_cliente» en la relación «ordenes»
+LINE 1: insert into ordenes(id,total,id_cliente,fecha_apertura,fecha...
+                                     ^
+]
+ [0;36m[2024-02-13 00:17:52.445403]:[0;32merror de base de datos
+ [0;36m[2024-02-13 00:17:52.445631]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-13 00:22:42.676404]:[0;33m 0.0
+ [0;36m[2024-02-13 00:22:42.676611]:[0;33m 0.0
+ [0;36m[2024-02-13 00:22:42.689202]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:22:42.690019]:[0;31m Error de base de datos  detail[no existe la columna «id_cliente» en la relación «ordenes»
+LINE 1: insert into ordenes(id,total,id_cliente,fecha_apertura,fecha...
+                                     ^
+]
+ [0;36m[2024-02-13 00:22:42.690132]:[0;32merror de base de datos
+ [0;36m[2024-02-13 00:22:42.690351]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-13 00:23:03.729959]:[0;33m 0.0
+ [0;36m[2024-02-13 00:23:03.730052]:[0;33m 0.0
+ [0;36m[2024-02-13 00:23:03.741242]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:23:03.742609]:[0;31m Error de base de datos  detail[no existe la columna «id_cliente» en la relación «ordenes»
+LINE 1: insert into ordenes(id,total,id_cliente,fecha_apertura,fecha...
+                                     ^
+]
+ [0;36m[2024-02-13 00:23:03.742785]:[0;32merror de base de datos
+ [0;36m[2024-02-13 00:23:03.743225]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-13 00:24:22.776233]:[0;33m 101.0
+ [0;36m[2024-02-13 00:24:22.776387]:[0;33m 101.0
+ [0;36m[2024-02-13 00:24:22.789132]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:24:22.793563]:[0;31m Error de integridad en la base de datos  as [inserción o actualización en la tabla «ordenes» viola la llave foránea «ordenes_fk_conceptos»
+DETAIL:  La llave (id_concepto)=(0) no está presente en la tabla «conceptos_pagos».
+]
+ [0;36m[2024-02-13 00:24:22.793711]:[0;32mPuedes que estes registrando una orden cuyos datos ya existen en nuestra base de datos verifica y si el problema persite comuniquese con el equipo de soporte
+ [0;36m[2024-02-13 00:24:22.794059]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-13 00:25:39.428123]:[0;33m 101.0
+ [0;36m[2024-02-13 00:25:39.428339]:[0;33m -101.0
+ [0;36m[2024-02-13 00:25:39.438799]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-13 00:25:39.443073]:[0;32mDesconexión exitosa de la base de datos
