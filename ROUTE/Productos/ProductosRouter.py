@@ -11,3 +11,16 @@ async def CrearProducto(producto:ProductosEntity)->ProductosEntity:
     if trigger.status == True:
         return trigger.response
     raise HTTPException (400, trigger.message)
+@PRODUCTOS.get("/crear/Inventario/{idProducto}/{cantidad}")
+async  def  crearInventario(idPorducto:str,cantidad:float):
+    trigger=core.EnviarInventario(idPorducto,cantidad)
+    if trigger.status:
+        return trigger.response
+    raise HTTPException (400, trigger.message)
+
+@PRODUCTOS.get("/get/all")
+async def getAllProductos() -> list[ProductosEntity]:
+    trigger = core.leerProductos
+    if trigger.status :
+        return trigger.response
+    raise HTTPException (400, trigger.message)

@@ -11,7 +11,7 @@ from ROUTE.Pagos.conceptosRouter import CONCEPTOS
 from ROUTE.Finance.financeRouter import FINANCE
 from ROUTE.Ordenes.ordenesRouter import ORDENES
 from ROUTE.Productos.ProductosRouter import PRODUCTOS
-
+from ROUTE.Ordenes.pedidosRouter import PEDIDOS
 origins = ["*"]
 app =FastAPI(title="Padel ",version="1.0",openapi_url="/localhost",logger="info",logs_paths="/home/munay/MUNAYSYSTEM2.1DAO/APP/")
 
@@ -28,7 +28,7 @@ app.include_router(USER)
 app.include_router(CLIENTES)
 app.include_router(FINANCE)
 app.include_router(CONCEPTOS)
-
+app.include_router(PEDIDOS)
 if __name__ == '__main__':
     configServer: Config = uvicorn.Config("main:app",port=8010,log_level="info",reload=False,host="0.0.0.0")
     server = uvicorn.Server(configServer)

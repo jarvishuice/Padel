@@ -20,8 +20,25 @@ class ProductosServices(Logs):
             self.Warnings(f'hay que agregar la imagen del producto {producto.id}')
             producto.urlImg= 'inserta  la imgen del producto '
         trigger= self.Core.CrearProducto(producto=producto)
-        inventario = self.CoreInventario.registrar(inventarioEntity)
+
         if trigger.status == False:
             self.Error(f"El servicio Productos en el hilo crear Productos ha recibido un status False detail [{trigger.message}]")
             return trigger
         return trigger
+    def EnviarInventario(self, idProducto: str, cantidad: float = 0)-> ResponseInternalEntity:
+        """
+
+        :type cantidad: object
+        """
+        Inventor=InventarioEntity(idProducto=idProducto,cantidad=cantidad)
+        trigger: ResponseInternalEntity =  self.CoreInventario.registrar(Inventor)
+        if trigger.status :
+            return trigger
+        self.Error(f"el core Productos a recibido un error en hilo de EnviarInventario detail [{trigger.message}]")
+        return trigger
+
+    @property
+    def leerProductos(self) -> ResponseInternalEntity:
+        return self.Core.GetAllProductos
+    def descuentoInventario(self, idProducto: str, cantidad: float) -> ResponseInternalEntity:
+        return self.CoreInventario.decontarInventario(idProducto,cantidad)

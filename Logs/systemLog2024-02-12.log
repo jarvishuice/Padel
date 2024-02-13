@@ -28,3 +28,31 @@ DETAIL:  Ya existe la llave (nombre)=(JARVIS).
  [0;36m[2024-02-12 21:52:50.214243]:[0;32mha finaliado la ejecucion del registros de productos DAO
  [0;36m[2024-02-12 21:52:50.214473]:[0;32mDesconexión exitosa de la base de datos
  [0;36m[2024-02-12 21:52:50.214574]:[0;31m El servicio Productos en el hilo crear Productos ha recibido un status False detail [Puedes que estes regiuitrando un cliente cuyos datos ya existen en nuestra base de datos verifica y si el problema persite comuniquese con el equipo de soporte]
+ [0;36m[2024-02-12 22:27:34.996782]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 22:27:34.998068]:[0;31m Error de integridad en la base de datos  as [llave duplicada viola restricción de unicidad «inventario_pk»
+DETAIL:  Ya existe la llave (id_producto)=(0).
+]
+ [0;36m[2024-02-12 22:27:34.998250]:[0;32mha finaliado la ejecucion del registros de productos DAO
+ [0;36m[2024-02-12 22:27:34.998512]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 22:27:34.998618]:[0;31m el core Productos a recibido un error en hilo de EnviarInventario detail [Puedes que estes regiuitrando un cliente cuyos datos ya existen en nuestra base de datos verifica y si el problema persite comuniquese con el equipo de soporte]
+ [0;36m[2024-02-12 22:27:45.898413]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 22:27:45.901474]:[0;31m Error de integridad en la base de datos  as [inserción o actualización en la tabla «inventario» viola la llave foránea «inventario_fk»
+DETAIL:  La llave (id_producto)=(1) no está presente en la tabla «productos».
+]
+ [0;36m[2024-02-12 22:27:45.901577]:[0;32mha finaliado la ejecucion del registros de productos DAO
+ [0;36m[2024-02-12 22:27:45.901817]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 22:27:45.901917]:[0;31m el core Productos a recibido un error en hilo de EnviarInventario detail [Puedes que estes regiuitrando un cliente cuyos datos ya existen en nuestra base de datos verifica y si el problema persite comuniquese con el equipo de soporte]
+ [0;36m[2024-02-12 22:28:22.388364]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 22:28:22.393612]:[0;32mha finaliado la ejecucion del registros de productos DAO
+ [0;36m[2024-02-12 22:28:22.393869]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 22:50:27.786078]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 22:50:27.789628]:[0;33m No se encontraron registros en la tabla productos 
+ [0;36m[2024-02-12 22:50:27.790537]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 22:51:42.268795]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 22:51:42.271916]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 22:52:52.872579]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 22:52:52.875622]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 22:55:43.164897]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 22:55:43.169634]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 22:59:34.866363]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 22:59:34.875135]:[0;32mDesconexión exitosa de la base de datos

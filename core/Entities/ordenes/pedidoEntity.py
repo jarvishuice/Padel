@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from typing import Optional
 
 class PedidosEntity(BaseModel):
     idOrden: str
@@ -8,4 +8,5 @@ class PedidosEntity(BaseModel):
     cantidad:float
     costo: float
     precio: float
-    total:float = precio * cantidad
+    total:Optional[float]
+    iterable:bool

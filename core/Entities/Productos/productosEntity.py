@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from typing import Optional
 
 class ProductosEntity(BaseModel):
     """
@@ -8,7 +8,7 @@ class ProductosEntity(BaseModel):
     #este se gebnera con :time.time()
     id: str
     nombre: str
-    urlImg:str
+    urlImg:Optional[str]
     # precio de compra
     costo :float
     # precio de venta

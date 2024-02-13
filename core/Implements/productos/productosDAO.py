@@ -46,8 +46,43 @@ class ProductosDAO(IProductos,Psql,Logs):
     def EditarProductos (self, producto: ProductosEntity) :
         pass
 
+    @property
     def GetAllProductos (self) :
-        ...
+        try:
+            data = []
+            conexion = self.connect()
+            if conexion.status ==False:
+                self.Error("Error de conexion a la base de datos")
+                return ResponseInternalEntity(status=False,message="Error de conexion a la base de datos ",response=None)
+            with self.conn.cursor() as cur:
+                cur.execute("select * from productos order by nombre asc  ")
+                count = cur.rowcount
+                if count <= 0:
+                    self.Warnings("No se encontraron registros en la tabla productos ")
+                    return ResponseInternalEntity(status=True,message="No se encontraron registros ",response =data)
+                for i in cur:
+                    data.append(ProductosEntity(id=str(i[0]),
+                                                nombre=i[1],
+                                                urlImg=i[2],
+                                                costo=float(i[3]),
+                                                precio=float(i[4]),
+                                                idCategoria=int(i[5]),
+                                                idAlmacen=int(i[6]),
+                                                descontable=bool(i[7])
+                                                ))
+                return ResponseInternalEntity(status=True,message="Exito al leer todos los productos",response=data)
+        except self.DATABASE_ERROR as e:
+            Logs.Error(f"Error de base de datos  detail[{e}]")
+            return ResponseInternalEntity(status=False,message="error de base de datos",response=None)
+        except self.INTERFACE_ERROR as e :
+            Logs.Error(f"Error de interface detail {e}")
+            return ResponseInternalEntity(status=False,message="Error de interface en base de datos",response=None)
+        except self.OPERATIONAL_ERROR as e :
+            Logs.Error(f"Error de operaciones detail [{e}]")
+            return ResponseInternalEntity(status=False,message="Error de operaciones en la base de datos",response= None)
+        finally:
+            self.disconnect()
+
 
     def getProductByCategoria (self, idCategoria: int) :
         pass

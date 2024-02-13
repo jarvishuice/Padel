@@ -4,11 +4,12 @@ from core.interface.productos.IInventario import IInventario,InventarioEntity
 from providers.Db.PostgresConection import Psql,ResponseInternalEntity
 
 
-class InventarioDAO(Psql,Logs,IInventario):
+class InventarioDAO(IInventario,Psql,Logs):
     def __init__(self):
         super().__init__()
+
     @override
-    def registrar (self, producto: InventarioEntity) -> ResponseInternalEntity :
+    def registrar(self, producto: InventarioEntity) -> ResponseInternalEntity :
         try:
             conexion  = self.connect()
             if conexion == False:
@@ -39,4 +40,35 @@ class InventarioDAO(Psql,Logs,IInventario):
         pass
     @override
     def decontarInventario (self, idProducto: str, cantidad: float) -> ResponseInternalEntity :
-        pass
+        try:
+            conexion =  self.connect()
+            if conexion.status == False:
+                self.Error("Error de conexion a la bas e de datos")
+                return ResponseInternalEntity(status= False ,message="Error de conexion" ,response = None)
+            with self.conn.cursor() as cur:
+                cur.execute(f"""
+                update inventario set cantidad = ((select cantidad 
+                from inventario where id_producto  = '{idProducto}')-{cantidad}) 
+                where id_producto ='{idProducto}';
+                        """)
+                self.conn.commit()
+                count = cur.rowcount
+                if count  <= 0:
+                    self.Warnings("no s eactualizo ningun registro del inventario ....  ")
+                    return ResponseInternalEntity(status= False,message=f"no se pudo realizar el descuento de{cantidad} del producto {idProducto}",response=False)
+                return ResponseInternalEntity(status=True,message=f"descontado {cantidad} del producto {idProducto}",response= True)
+        except self.INTEGRIDAD_ERROR as e:
+            Logs.Error(f"Error de integridad en la base de datos  as [{e}]")
+            return ResponseInternalEntity(status=False,message="Puedes que estes regiuitrando un cliente cuyos datos ya existen en nuestra base de datos verifica y si el problema persite comuniquese con el equipo de soporte",response=None)
+        except self.DATABASE_ERROR as e:
+            Logs.Error(f"Error de base de datos  detail[{e}]")
+            return ResponseInternalEntity(status=False,message="error de base de datos",response=None)
+        except self.INTERFACE_ERROR as e :
+            Logs.Error(f"Error de interface detail {e}")
+            return ResponseInternalEntity(status=False,message="Error de interface en base de datos",response=None)
+        except self.OPERATIONAL_ERROR as e:
+            Logs.Error(f"Error de operaciones detail [{e}]")
+            return ResponseInternalEntity(status=False,message="Error de operaciones en la base de datos",response= None)
+        finally:
+            Logs.WirterTask("ha finaliado la ejecucion   descuento de inevntario  [InventarioDAO]")
+            self.disconnect()
