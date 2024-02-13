@@ -10,6 +10,7 @@ from ROUTE.user.userRouter import USER
 from ROUTE.Pagos.conceptosRouter import CONCEPTOS
 from ROUTE.Finance.financeRouter import FINANCE
 from ROUTE.Ordenes.ordenesRouter import ORDENES
+from ROUTE.Productos.ProductosRouter import PRODUCTOS
 
 origins = ["*"]
 app =FastAPI(title="Padel ",version="1.0",openapi_url="/localhost",logger="info",logs_paths="/home/munay/MUNAYSYSTEM2.1DAO/APP/")
@@ -21,6 +22,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(PRODUCTOS)
 app.include_router(ORDENES)
 app.include_router(USER)
 app.include_router(CLIENTES)

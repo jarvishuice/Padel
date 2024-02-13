@@ -1,0 +1,30 @@
+ [0;36m[2024-02-12 10:06:06.163556]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 10:06:06.183439]:[0;32mConceptos leidos con exito
+ [0;36m[2024-02-12 10:06:06.184058]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 10:09:27.504430]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 10:09:27.523618]:[0;32mConceptos leidos con exito
+ [0;36m[2024-02-12 10:09:27.524218]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 10:13:10.174372]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 10:13:10.177241]:[0;32mConceptos leidos con exito
+ [0;36m[2024-02-12 10:13:10.177986]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 10:14:11.118456]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 10:14:11.125995]:[0;32mConceptos leidos con exito
+ [0;36m[2024-02-12 10:14:11.126242]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 21:52:02.583404]:[0;33m se genero un id para el producto que tiene por nombre JARVIS 
+ recuenrda que hay que poner su codigo de barras 
+ [0;36m[2024-02-12 21:52:02.593305]:[0;33m hay que agregar la imagen del producto 1707789122.583241
+ [0;36m[2024-02-12 21:52:02.606720]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 21:52:02.606835]:[0;32mData correcta en los productos
+ [0;36m[2024-02-12 21:52:02.611571]:[0;32mha finaliado la ejecucion del registros de productos DAO
+ [0;36m[2024-02-12 21:52:02.611826]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 21:52:50.200529]:[0;33m se genero un id para el producto que tiene por nombre JARVIS 
+ recuenrda que hay que poner su codigo de barras 
+ [0;36m[2024-02-12 21:52:50.200725]:[0;33m hay que agregar la imagen del producto 1707789170.2003381
+ [0;36m[2024-02-12 21:52:50.212662]:[0;32mConexion realizada con exito
+ [0;36m[2024-02-12 21:52:50.212745]:[0;32mData correcta en los productos
+ [0;36m[2024-02-12 21:52:50.214144]:[0;31m Error de integridad en la base de datos  as [llave duplicada viola restricción de unicidad «productos_un»
+DETAIL:  Ya existe la llave (nombre)=(JARVIS).
+]
+ [0;36m[2024-02-12 21:52:50.214243]:[0;32mha finaliado la ejecucion del registros de productos DAO
+ [0;36m[2024-02-12 21:52:50.214473]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-02-12 21:52:50.214574]:[0;31m El servicio Productos en el hilo crear Productos ha recibido un status False detail [Puedes que estes regiuitrando un cliente cuyos datos ya existen en nuestra base de datos verifica y si el problema persite comuniquese con el equipo de soporte]

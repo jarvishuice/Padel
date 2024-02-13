@@ -7,10 +7,10 @@ from providers.Db.PostgresConection import Psql,ResponseInternalEntity
 
 
 class ProductosDAO(IProductos,Psql,Logs):
-    def __init__(self):
+    def __init__(self) -> object:
         super().__init__()
     @override
-    def CrearProducto(self, producto: ProductosEntity) :
+    def CrearProducto(self, producto: ProductosEntity) -> ResponseInternalEntity:
         try:
             conexion = self.connect()
             if producto.id is False:
@@ -26,7 +26,7 @@ class ProductosDAO(IProductos,Psql,Logs):
                 descontable) VALUES('{producto.id}', '{producto.nombre}', NULL, {producto.costo},{producto.precio}, {producto.idCategoria},
                  {producto.idAlmacen}, {producto.descontable});""")
                 self.conn.commit()
-            return ResponseInternalEntity(True,"Producto registrado de manera correcta",producto)
+            return ResponseInternalEntity(status=True,message="Producto registrado de manera correcta",response=producto)
         except self.INTEGRIDAD_ERROR as e:
             Logs.Error(f"Error de integridad en la base de datos  as [{e}]")
             return ResponseInternalEntity(status=False,message="Puedes que estes regiuitrando un cliente cuyos datos ya existen en nuestra base de datos verifica y si el problema persite comuniquese con el equipo de soporte",response=None)
