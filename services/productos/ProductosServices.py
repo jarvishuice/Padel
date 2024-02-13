@@ -40,5 +40,9 @@ class ProductosServices(Logs):
     @property
     def leerProductos(self) -> ResponseInternalEntity:
         return self.Core.GetAllProductos
+
+    @property
+    def ObtenerInventario(self) -> ResponseInternalEntity:
+        return self.CoreInventario.Obtenernventario
     def descuentoInventario(self, idProducto: str, cantidad: float) -> ResponseInternalEntity:
         return self.CoreInventario.decontarInventario(idProducto,cantidad)

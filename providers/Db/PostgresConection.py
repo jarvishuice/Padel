@@ -17,7 +17,8 @@ class Psql(ConectionDbInterface):
         self.conn = None
 
     @override
-    def connect(self) -> object:
+    def connect(self) -> object | ResponseInternalEntity:
+
         """
 
         :rtype: object
@@ -34,7 +35,7 @@ class Psql(ConectionDbInterface):
             return ResponseInternal.responseInternal(ResponseInternalEntity(status=True,message=err,response=self.conn))
 
     @override
-    def disconnect(self):
+    def disconnect(self) -> object:
         if self.conn is not None:
             self.conn.close()
             Logs.WirterTask("Desconexión exitosa de la base de datos")

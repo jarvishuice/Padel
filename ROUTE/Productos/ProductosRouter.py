@@ -1,4 +1,6 @@
 from fastapi import APIRouter, HTTPException
+
+from core.Entities.Productos.inventarioEntity import inventarioEntityOut
 from services.productos.ProductosServices import ProductosEntity, ProductosServices
 
 core =ProductosServices()
@@ -24,3 +26,9 @@ async def getAllProductos() -> list[ProductosEntity]:
     if trigger.status :
         return trigger.response
     raise HTTPException (400, trigger.message)
+@PRODUCTOS.get("/inventario/all",description="retorna el inmventario actual",response_model=list[inventarioEntityOut])
+async def getInventario():
+    trigger = core.ObtenerInventario
+    if trigger.status:
+        return trigger.response
+    raise HTTPException(400, trigger.message)

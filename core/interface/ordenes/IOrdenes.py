@@ -13,3 +13,6 @@ class IOrdenes(ABC):
         """
         ...
 
+    @abstractmethod
+    def getAllOrden(self):
+        ...

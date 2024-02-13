@@ -7,8 +7,14 @@ URL = '/Padel/ordenes'
 ORDENES = APIRouter(prefix=URL,tags=["ORDENES"])
 
 @ORDENES.post("/")
-def crearOrden(orden:OrdenEntity):
+async def crearOrden(orden:OrdenEntity):
     trigger = core.crearOrden(orden)
+    if trigger.status == True :
+        return trigger.response
+    raise HTTPException(400, trigger.message)
+@ORDENES.get("/get/All")
+async def getAllOrdenes():
+    trigger = core.leerOrdenes
     if trigger.status == True :
         return trigger.response
     raise HTTPException(400, trigger.message)

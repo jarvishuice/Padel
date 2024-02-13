@@ -19,3 +19,7 @@ class OrdenesServices(Logs):
         self.Warnings(  "calculando el total de l una orden de egreso "+str(orden.total))
 
         return self.__core.registrarOrden(orden)
+
+    @property
+    def leerOrdenes(self)-> ResponseInternalEntity:
+        return self.__core.getAllOrden()

@@ -6,6 +6,8 @@ from uvicorn import Config
 
 from ROUTE.Clientes.ClientesRouter import CLIENTES
 import uvicorn
+
+from ROUTE.Pagos.PagosRouter import PAGOS
 from ROUTE.user.userRouter import USER
 from ROUTE.Pagos.conceptosRouter import CONCEPTOS
 from ROUTE.Finance.financeRouter import FINANCE
@@ -22,6 +24,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(PAGOS)
 app.include_router(PRODUCTOS)
 app.include_router(ORDENES)
 app.include_router(USER)
