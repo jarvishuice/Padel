@@ -8,7 +8,7 @@ POS = APIRouter(prefix=URL,tags=["POS"])
 
 @POS.post("/")
 async def crearOrden(operacion:OperacionEntity):
-    trigger = core.GenerarVenta()
+    trigger = core.GenerarVenta(operacion)
     if trigger.status == True :
         return trigger.response
     raise HTTPException(400, trigger.message)

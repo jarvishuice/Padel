@@ -15,15 +15,16 @@ class ProductosServices(Logs):
         #Colocando el nombre del producto en mayuscula
         producto.nombre = producto.nombre.upper()
         if producto.precio <= 0:
-            return ResponseInternalEntity(status=False,message="Error estas registrando un precio nulo ",response=None)
+            return ResponseInternalEntity(status=False,
+                                          message="Error estas registrando un precio nulo ",
+                                          response=None)
         if producto.urlImg is None or producto.urlImg == ' ':
             self.Warnings(f'hay que agregar la imagen del producto {producto.id}')
             producto.urlImg= 'inserta  la imgen del producto '
         trigger= self.Core.CrearProducto(producto=producto)
-
         if trigger.status == False:
             self.Error(f"El servicio Productos en el hilo crear Productos ha recibido un status False detail [{trigger.message}]")
-            return trigger
+
         return trigger
     def EnviarInventario(self, idProducto: str, cantidad: float = 0)-> ResponseInternalEntity:
         """

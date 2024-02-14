@@ -5,9 +5,13 @@ from core.interface.POS.IPOS import IPOS
 
 
 class POSServices(IPOS,Logs):
-
+    def __init__(self):
+        super().__init__()
     def GenerarVenta(self, invoice: OperacionEntity) -> ResponseInternalEntity | OperacionEntity:
-        return invoice
+        return ResponseInternalEntity(status=True,
+                                      message="mensns",
+                                      response=invoice
+                                      )
     @property
     def ventasToday(self) -> ResponseInternalEntity | list[OperacionEntity]:
         pass
