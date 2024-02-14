@@ -1,5 +1,4 @@
 import time
-
 from config.utils.override import override
 from core.interface.finance.Banco.IBAnco import IBanco,BancoEntity
 from providers.Db.PostgresConection import Psql,ResponseInternalEntity,ResponseInternal,Logs
