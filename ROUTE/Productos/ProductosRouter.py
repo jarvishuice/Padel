@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 
 from core.Entities.Productos.inventarioEntity import inventarioEntityOut
-from services.productos.ProductosServices import ProductosEntity, ProductosServices
+from services.productos.ProductosServices import ProductosEntity, ProductosServices,CategoriaEntity
 
 core =ProductosServices()
 URL: str = 'Padel/Productos'
@@ -30,5 +30,20 @@ async def getAllProductos() -> list[ProductosEntity]:
 async def getInventario():
     trigger = core.ObtenerInventario
     if trigger.status:
+        return trigger.response
+    raise HTTPException(400, trigger.message)
+
+@PRODUCTOS.get("/categorias/all",
+               description="obtener todas las categorias de los productos ",
+               response_model= list[CategoriaEntity])
+async def getAllCategorias():
+    trigger = core.getCategorias
+    if trigger.status:
+        return trigger.response
+    raise HTTPException(400, trigger.message)
+@PRODUCTOS.post("/categorias/")
+async def crearCategoria(categoria:CategoriaEntity):
+    trigger = core.crearCategoria(categoria)
+    if trigger.status :
         return trigger.response
     raise HTTPException(400, trigger.message)

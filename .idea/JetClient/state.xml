@@ -35,6 +35,35 @@
                 </option>
                 <option name="sortWeight" value="1000000" />
               </folderState>
+              <folderState>
+                <option name="id" value="eb1c27c2-10d2-446f-ae72-dda203eab33f" />
+                <option name="name" value="POS" />
+                <option name="requests">
+                  <list>
+                    <requestState>
+                      <option name="body">
+                        <bodyState>
+                          <option name="raw" value="{&#10;  &quot;encabezado&quot;: {&#10;    &quot;id&quot;: &quot;id_EU19&quot;,&#10;    &quot;total&quot;: 445,&#10;    &quot;idCliente&quot;: &quot;idCliente_Fu65&quot;,&#10;    &quot;fechaApertura&quot;: &quot;fechaApertura_fL34&quot;,&#10;    &quot;fechaPago&quot;: &quot;fechaPago_LO00&quot;,&#10;    &quot;IVA&quot;: 12,&#10;    &quot;IGTF&quot;: 309,&#10;    &quot;subTotal&quot;: 922,&#10;    &quot;status&quot;: &quot;status_rz76&quot;,&#10;    &quot;idConcepto&quot;: 609&#10;  },&#10;  &quot;detalle&quot;: [&#10;    {&#10;      &quot;idOrden&quot;: &quot;idOrden_qN96&quot;,&#10;      &quot;total&quot;: 380,&#10;      &quot;idProducto&quot;: &quot;idProducto_gK47&quot;,&#10;      &quot;cantidad&quot;: 235,&#10;      &quot;costo&quot;: 320,&#10;      &quot;precio&quot;: 792,&#10;      &quot;iterable&quot;: false&#10;    }&#10;  ],&#10;  &quot;pagos&quot;: {&#10;    &quot;id&quot;: &quot;id_jM29&quot;,&#10;    &quot;idOrden&quot;: &quot;idOrden_TJ92&quot;,&#10;    &quot;idPersona&quot;: &quot;idPersona_pT23&quot;,&#10;    &quot;total&quot;: 325,&#10;    &quot;IVA&quot;: 233,&#10;    &quot;IGTF&quot;: 217,&#10;    &quot;idConcepto&quot;: 862&#10;  },&#10;  &quot;detallesPagos&quot;: {&#10;    &quot;id&quot;: &quot;id_HA74&quot;,&#10;    &quot;idPago&quot;: &quot;idPago_cu51&quot;,&#10;    &quot;idFormaPago&quot;: &quot;idFormaPago_cB39&quot;,&#10;    &quot;monto&quot;: 401,&#10;    &quot;idTasa&quot;: &quot;idTasa_lH69&quot;&#10;  }&#10;}" />
+                          <option name="type" value="JSON" />
+                        </bodyState>
+                      </option>
+                      <option name="headers">
+                        <list>
+                          <headerState>
+                            <option name="key" value="Content-Type" />
+                            <option name="value" value="application/json" />
+                          </headerState>
+                        </list>
+                      </option>
+                      <option name="id" value="4f105a70-8919-442c-bfbb-67d26c29705e" />
+                      <option name="method" value="POST" />
+                      <option name="name" value="CREARORDEN" />
+                      <option name="url" value="http://0.0.0.0:8010/Padel/POS/" />
+                    </requestState>
+                  </list>
+                </option>
+                <option name="sortWeight" value="2000000" />
+              </folderState>
             </list>
           </option>
           <option name="id" value="2a7f9984-8f55-471d-b316-965dd11680c4" />
