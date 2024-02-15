@@ -44,6 +44,6 @@ async def getAllCategorias():
 @PRODUCTOS.post("/categorias/")
 async def crearCategoria(categoria:CategoriaEntity):
     trigger = core.crearCategoria(categoria)
-    if trigger.status :
+    if trigger.status:
         return trigger.response
     raise HTTPException(400, trigger.message)

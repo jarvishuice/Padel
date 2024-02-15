@@ -25,6 +25,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+@app.get("/Padel/test")
+async def test():
+    return True
 app.include_router(POS)
 app.include_router(PAGOS)
 app.include_router(PRODUCTOS)
