@@ -13,6 +13,18 @@ async def CrearProducto(producto:ProductosEntity)->ProductosEntity:
     if trigger.status == True:
         return trigger.response
     raise HTTPException (400, trigger.message)
+@PRODUCTOS.get("/filter/almacen/{idAlmacen}")
+async def filterProductosByAlmacen(idAlmacen:int)-> list[ProductosEntity]:
+    trigger = core.productosByAlmacen(idAlmacen)
+    if trigger.status == True:
+        return trigger.response
+    raise HTTPException(400, trigger.message)
+@PRODUCTOS.get("/filter/categoria/{idCategoria}")
+async def filterProductosByCategoria(idCategoria:int):
+    trigger = core.productosByCategorias(idCategoria)
+    if trigger.status == True:
+        return trigger.response
+    raise HTTPException (400, trigger.message)
 @PRODUCTOS.get("/crear/Inventario/{idProducto}/{cantidad}")
 async  def  crearInventario(idPorducto:str,cantidad:float):
     trigger=core.EnviarInventario(idPorducto,cantidad)

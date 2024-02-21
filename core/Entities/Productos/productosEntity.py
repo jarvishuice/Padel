@@ -8,7 +8,7 @@ class ProductosEntity(BaseModel):
     #este se gebnera con :time.time()
     id: str
     nombre: str
-    urlImg:Optional[str]
+    urlImg:Optional[str|None]
     # precio de compra
     costo :float
     # precio de venta

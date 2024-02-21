@@ -28,6 +28,10 @@ class ProductosServices(Logs):
             self.Error(f"El servicio Productos en el hilo crear Productos ha recibido un status False detail [{trigger.message}]")
 
         return trigger
+    def productosByCategorias(self,idCategoria:int) -> ResponseInternalEntity | list[ProductosEntity]:
+        return self.Core.getProductByCategoria(idCategoria)
+    def productosByAlmacen(self,idAlmacen:int)-> ResponseInternalEntity | list[ProductosEntity]:
+        return self.Core.getProductosByAlmacen(idAlmacen)
     def EnviarInventario(self, idProducto: str, cantidad: float = 0)-> ResponseInternalEntity:
         """
 

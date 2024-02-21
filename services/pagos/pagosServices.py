@@ -17,7 +17,7 @@ class PagosServices(Logs):
         if pago.total == 0:
             # validacion del monto
             return ResponseInternalEntity(status=False,
-                                          message="error esta intentando ingreesar un pago por 0 ",
+                                          message="error esta intentando ingresar  un pago por 0 ",
                                           response=None)
         return self.__core.registrarPago(pago=pago)
     def registrarDetallePago(self,detalle:DetallesPagosEntity):
