@@ -14,7 +14,7 @@ async def CrearProducto(producto:ProductosEntity)->ProductosEntity:
         return trigger.response
     raise HTTPException (400, trigger.message)
 @PRODUCTOS.get("/filter/almacen/{idAlmacen}")
-async def filterProductosByAlmacen(idAlmacen:int)-> list[ProductosEntity]:
+async def filterProductosByAlmacen(idAlmacen:int) -> list[ProductosEntity]:
     trigger = core.productosByAlmacen(idAlmacen)
     if trigger.status == True:
         return trigger.response
@@ -32,7 +32,7 @@ async def EditarProducto(producto:ProductosEntity):
         return trigger.response
     raise HTTPException (400, trigger.message)
 @PRODUCTOS.get("/crear/Inventario/{idProducto}/{cantidad}")
-async  def  crearInventario(idPorducto:str,cantidad:float):
+async def crearInventario(idPorducto:str,cantidad:float):
     trigger=core.EnviarInventario(idPorducto,cantidad)
     if trigger.status:
         return trigger.response
@@ -41,10 +41,12 @@ async  def  crearInventario(idPorducto:str,cantidad:float):
 @PRODUCTOS.get("/get/all")
 async def getAllProductos() -> list[ProductosEntity]:
     trigger = core.leerProductos
-    if trigger.status :
+    if trigger.status:
         return trigger.response
-    raise HTTPException (400, trigger.message)
-@PRODUCTOS.get("/inventario/all",description="retorna el inmventario actual",response_model=list[inventarioEntityOut])
+    raise HTTPException(400, trigger.message)
+@PRODUCTOS.get("/inventario/all",
+               description="retorna el inmventario actual",
+               response_model=list[inventarioEntityOut])
 async def getInventario():
     trigger = core.ObtenerInventario
     if trigger.status:
@@ -52,8 +54,8 @@ async def getInventario():
     raise HTTPException(400, trigger.message)
 
 @PRODUCTOS.get("/categorias/all",
-               description="obtener todas las categorias de los productos ",
-               response_model= list[CategoriaEntity])
+               description="obtener todas las categorias de los productos",
+               response_model=list[CategoriaEntity])
 async def getAllCategorias():
     trigger = core.getCategorias
     if trigger.status:
