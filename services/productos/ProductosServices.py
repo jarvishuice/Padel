@@ -32,9 +32,12 @@ class ProductosServices(Logs):
         return self.Core.getProductByCategoria(idCategoria)
     def productosByAlmacen(self,idAlmacen:int)-> ResponseInternalEntity | list[ProductosEntity]:
         return self.Core.getProductosByAlmacen(idAlmacen)
+    def editProductos(self,producto:ProductosEntity):
+        return self.Core.editProduct(producto)
     def EnviarInventario(self, idProducto: str, cantidad: float = 0)-> ResponseInternalEntity:
         """
 
+        :param idProducto:
         :type cantidad: object
         """
         Inventor=InventarioEntity(idProducto=idProducto,cantidad=cantidad)

@@ -25,6 +25,12 @@ async def filterProductosByCategoria(idCategoria:int):
     if trigger.status == True:
         return trigger.response
     raise HTTPException (400, trigger.message)
+@PRODUCTOS.put("/edit/")
+async def EditarProducto(producto:ProductosEntity):
+    trigger = core.editProductos(producto)
+    if trigger.status == True:
+        return trigger.response
+    raise HTTPException (400, trigger.message)
 @PRODUCTOS.get("/crear/Inventario/{idProducto}/{cantidad}")
 async  def  crearInventario(idPorducto:str,cantidad:float):
     trigger=core.EnviarInventario(idPorducto,cantidad)

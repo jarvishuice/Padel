@@ -155,3 +155,38 @@ class ProductosDAO(IProductos,Psql,Logs):
             return ResponseInternalEntity(status=False,message="Error de operaciones en la base de datos",response= None)
         finally:
             self.disconnect()
+    def editProduct(self,producto:ProductosEntity):
+        try :
+            conexion = self.connect ()
+            if conexion.status == False :
+                self.Error ("error al conectarse al servidpor de base de datos")
+                return ResponseInternalEntity (status=False,
+                                               message="error de conexion  a la base de datos",
+                                               response=None)
+            with self.conn.cursor () as cur :
+                cur.execute (f"""UPDATE public.productos SET nombre='{producto.nombre}', urlimg='{producto.urlImg}', 
+                costo={producto.costo}, precio={producto.precio},id_categoria={producto.idCategoria}, 
+                id_almacen={producto.idAlmacen}, descontable={producto.descontable} WHERE id='{producto.id}';""")
+                self.conn.commit ()
+            return ResponseInternalEntity (status=True,
+                                           message="Producto actualizado de manera correcta",
+                                           response=producto)
+        except self.INTEGRIDAD_ERROR as e :
+            Logs.Error (f"Error de integridad en la base de datos  as [{e}]")
+            return ResponseInternalEntity (status=False,
+                                           message=f"error de integridad detalle[{e}] ",
+                                           response=None)
+        except self.DATABASE_ERROR as e :
+            Logs.Error (f"Error de base de datos  detail[{e}]")
+            return ResponseInternalEntity (status=False, message="error de base de datos", response=None)
+        except self.INTERFACE_ERROR as e :
+            Logs.Error (f"Error de interface detail {e}")
+            return ResponseInternalEntity (status=False, message="Error de interface en base de datos", response=None)
+        except self.OPERATIONAL_ERROR as e :
+            Logs.Error (f"Error de operaciones detail [{e}]")
+            return ResponseInternalEntity (status=False, message="Error de operaciones en la base de datos",
+                                           response=None)
+        finally :
+            Logs.WirterTask ("ha finaliado la ejecucion de edicion  de productos DAO")
+            self.disconnect ()
+
